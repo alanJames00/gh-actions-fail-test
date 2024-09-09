@@ -22,6 +22,7 @@ jobs:
       run: |
         curl -X POST https://teams-sandbox.alanj.live/api/build-failure \
         -H 'Content-Type: application/json' \
+        -H 'User-Agent: GitHub-Actions-Webhook' \
         -d '{
           "status": "failure",
           "message": "Docker build failed",
